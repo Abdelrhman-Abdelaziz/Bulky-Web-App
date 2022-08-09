@@ -1,0 +1,25 @@
+﻿@model CoverType
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form method="post" class="mt-5">
+    <div class="border p-3 col-md-6 m-auto">
+        <div class="row pb-2">
+            <h2 class="text-danger">Delete CoverType</h2>
+            <hr />
+        </div>
+
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group mb-3">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" disabled/>
+        </div>
+        @*<div asp-validation-summary="All" ></div>*@
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-danger" style="width:150px"/>
+            <a asp-action="index" class="btn btn-secondary" style="width:150px" >Back to List</a>
+        </div>
+    </div>
+</form>

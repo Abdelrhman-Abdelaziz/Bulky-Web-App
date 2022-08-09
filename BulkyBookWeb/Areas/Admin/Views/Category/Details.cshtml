@@ -1,0 +1,34 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="border p-3 col-md-6 m-auto mt-4">
+    <div class="row pb-2">
+        <h2 class="text-primary">Category Details</h2>
+    </div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            Name
+        </dt>
+        <dd class = "col-sm-8">
+            @Model.Name
+        </dd>
+        <dt class = "col-sm-4">
+            Displayed Order
+        </dt>
+        <dd class = "col-sm-8">
+            @Model.DisplayOrder
+        </dd>
+        <dt class = "col-sm-4">
+            Created Date & Time
+        </dt>
+        <dd class = "col-sm-8">
+            @Model.CreatedDateTime
+        </dd>
+    </dl>
+    <a asp-action="index" class="btn btn-secondary" style="width:150px" >Back to List</a>
+</div>
