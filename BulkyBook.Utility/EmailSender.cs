@@ -13,8 +13,8 @@ public class EmailSender : IEmailSender
 {
     public Task SendEmailAsync(string email, string subject, string htmlMessage)
     {
-        var emailToSend = new MimeMessage();
-        emailToSend.From.Add(MailboxAddress.Parse("abdou@web.com"));
+        /*var emailToSend = new MimeMessage();
+        emailToSend.From.Add(MailboxAddress.Parse("abdelrhmanabdelaziz01@gmail.com"));
         emailToSend.To.Add(MailboxAddress.Parse(email));
         emailToSend.Subject = subject;
         emailToSend.Body = new TextPart(MimeKit.Text.TextFormat.Html){ Text = htmlMessage };
@@ -22,10 +22,10 @@ public class EmailSender : IEmailSender
         using(var emailClient = new SmtpClient())
         {
             emailClient.Connect("smtp@gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
-            emailClient.Authenticate("abdouzyada@gmail.com", "A0117126402z");
+            emailClient.Authenticate("abdelrhmanabdelaziz01@gmail.com", "0117126402");
             emailClient.Send(emailToSend);
             emailClient.Disconnect(true);
-        }
+        }*/
         return Task.CompletedTask;
     }
 }

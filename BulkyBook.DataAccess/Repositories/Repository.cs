@@ -72,7 +72,8 @@ namespace BulkyBook.DataAccess.Repositories
         {
             if (includeProperties != null)
             {
-                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                var includeProps = includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var includeProp in includeProps)
                 {
                     query = query.Include(includeProp);
                 }

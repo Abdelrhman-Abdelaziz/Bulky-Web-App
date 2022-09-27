@@ -25,8 +25,8 @@ builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 builder.Services.AddAuthentication().AddFacebook(options =>
 {
-    options.AppId = "533257571075733";
-    options.AppSecret = "cee28519a0b06e73c034c996885febbb";
+    options.AppId = "FacebookID";
+    options.AppSecret = "FaceBookApiKey";
 });
 builder.Services.ConfigureApplicationCookie(options =>
 {
@@ -66,7 +66,8 @@ app.UseSession();
 app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}"
+    );
 
 app.Run();
 
